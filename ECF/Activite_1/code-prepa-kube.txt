@@ -1,1 +1,26 @@
+# mise à jour de la machine d'administration
+sudo apt update
+sudo apt install -y unzip
 
+# configuration de l'environnement AWS
+export AWS_ACCESS_KEY_ID=*********************
+export AWS_SECRET_ACCESS_KEY=***********************
+export AWS_DEFAULT_REGION=eu-north-1
+
+# install eksctl
+curl --silent --location "https://github.com/weaveworks/eksctl/releases/latest/download/eksctl_$(uname -s)_amd64.tar.gz" | tar xz -C /tmp
+sudo mv /tmp/eksctl /usr/local/bin
+
+# install awscli
+curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "awscliv2.zip"
+unzip awscliv2.zip
+sudo ./aws/install
+
+# install kubectl
+curl -O https://s3.us-west-2.amazonaws.com/amazon-eks/1.33.0/2025-05-01/bin/linux/amd64/kubectl
+chmod +x ./kubectl
+sudo mv ./kubectl /usr/local/bin
+
+# install du cluster
+eksctl create cluster --name=InfoLine --ssh-access --ssh-public-key ssh-infoline --nodes=1 --nodes-max 5 --asg-access
+kubectl get nodes
