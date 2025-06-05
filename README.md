@@ -11,7 +11,7 @@
 
 ### 📎 Bachelor Administrateur Système DevOps 
 
-![left 100%](images/bootcamp_devops.png)
+![left 100%](images/cover_devops.png)
 
 _`Début du projet le 01/11/2024`_
 
