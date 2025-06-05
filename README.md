@@ -22,7 +22,7 @@ _`Début du projet le 01/11/2024`_
 <details open="open">
   <summary><h2 style="display: inline-block">Table des matières</h2></summary>
   <ol>
-    <li><a href="#a-propos-du-bootcamp">A propos du bootcamp</a></li>
+    <li><a href="#a-propos-du-la-formation">A propos de la formation</a></li>
     <li><a href="#les-outils-devops">Les outils DevOps</a></li>
     <li><a href="#utilisé-dans-les-projets">Utilisé dans les projets</a></li>
     <li><a href="#remerciements">Remerciements</a></li>
